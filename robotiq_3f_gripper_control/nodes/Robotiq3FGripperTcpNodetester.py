@@ -73,13 +73,6 @@ def mainLoop(address):
 
     # The Gripper command is received from the topic named 'Robotiq3FGripperRobotOutput'
     rospy.Subscriber(
-        "Robotiq3FGripperRobotOutput",
-        Robotiq3FGripperRobotOutput,
-        gripper.refreshCommand,
-    )
-    
-    # The Gripper command is received from the topic named 'myown'
-    rospy.Subscriber(
         "myown",
         Robotiq3FGripperRobotOutput,
         gripper.refreshCommand,
